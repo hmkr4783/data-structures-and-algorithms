@@ -1,4 +1,20 @@
+'use strict';
 
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 1
+
+Write a function named greeting that takes in a string and returns the string in all uppercase letters.
+
+Then, write a function named speaker that takes in a string and a callback function. The speaker function should return the string in all uppercase letters only by invoking the callback.
+------------------------------------------------------------------------------------------------ */
+
+const greeting = (word) => {
+    return word.toUpperCase();
+};
+
+const speaker = (message, callback) => {
+  return callback(message);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -17,12 +33,16 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  for (let i = 0; i < times; i++) {
+      callback (arr, num);
+  }
+  return arr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -37,12 +57,16 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeOne = (num, arr) => {
-  // Solution code here...
+    if (num % 3 === 2) arr.pop();
 };
 
 const removeElements = (arr, callback) => {
-  // Solution code here...
+    for (let i = 0; i < arr.length; i++) {
+        callback(arr[i], arr);
+    }
+    return arr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -51,10 +75,11 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-  // Solution code here...
+    arr.forEach((num) => callback(num, arr))
+    return arr;
 };
 
-/* ------------------------------------------------------------------------------------------------
+    /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
 Write a function named removeWithAnon that produces the same output as challenges 3 and 4.
@@ -64,9 +89,27 @@ This function should use forEach again, but rather than taking in a callback as 
 This anonymous function should accept up to three arguments: the element, the index, and the array.
 ------------------------------------------------------------------------------------------------ */
 
-const removeWithAnon = (arr) => {
-  // Solution code here...
-};
+const removeWithAnon = (arr, index) => {
+    arr.forEach((element) => callback(element, arr))
+}
+
+
+customElements, index, and array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
