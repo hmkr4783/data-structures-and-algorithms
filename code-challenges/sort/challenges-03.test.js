@@ -7,7 +7,7 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  arr.sort((a,b) => (b-a));
+  arr.sort((a,b) => (a<b));
   return arr;
 };
 
@@ -34,7 +34,8 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  // Solution code here...
+  arr.sort ((a,b) => (a.length>b.length));
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,8 +47,18 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  // Solution code here...
+  arr.sort ((a,b) => {
+    if (a.toLowerCase() < b.toLowerCase()){
+      return -1;
+    }else if (a.toLowerCase() > b.toLowerCase()){
+      return 1;
+    }else{
+      return 0;
+    }
+  });
+  return arr
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -63,8 +74,10 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  arr.sort ((a,b) => (a.price>b.price));
+  return arr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -111,7 +124,15 @@ If two people have the same full name, the younger one should come first. Do not
 ------------------------------------------------------------------------------------------------ */
 
 const sortPeopleBetter = (arr) => {
-  // Solution code here...
+  return arr.sort((a,b) => {
+    if (a.lastName !== b.lastName) {
+      return a.lastName > b.lastName ? 1 : -1;
+    } else if (a.firstName !== b.firstName) {
+      return a.firstName > b.firstName ? 1 : -1;
+    } else {
+      return a.age - b.age;
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
