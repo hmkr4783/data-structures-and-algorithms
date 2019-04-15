@@ -7,7 +7,7 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  arr.sort((a,b) => (a<b));
+  arr.sort((a, b) => (a < b));
   return arr;
 };
 
@@ -34,7 +34,7 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  arr.sort ((a,b) => (a.length>b.length));
+  arr.sort ((a, b) => (a.length > b.length));
   return arr;
 };
 
@@ -47,7 +47,7 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  arr.sort ((a,b) => {
+  arr.sort ((a, b) => {
     if (a.toLowerCase() < b.toLowerCase()){
       return -1;
     }else if (a.toLowerCase() > b.toLowerCase()){
@@ -74,7 +74,7 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  arr.sort ((a,b) => (a.price>b.price));
+  arr.sort ((a, b) => (a.price > b.price));
   return arr;
 };
 
@@ -87,8 +87,22 @@ Write a function named sortNumbersByLength that takes in an array of numbers and
 For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
+
+// const sortNumbersByLength = (arr) => {
+//   arr.sort ((a, b) => (a. > b.str));
+//   return arr;
+// };
+
+
 const sortNumbersByLength = (arr) => {
-  // Solution code here...
+  arr.sort ((a, b) => {
+    if (a.length !== b.length) {
+      return a.length > b.length ? 1 : -1;
+    } else {
+      return a < b;
+    }
+  });
+  return arr;
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -96,6 +110,7 @@ CHALLENGE 7
 
 Write a function named sortPeople that takes in an array of Person objects, each of which has firstName, lastName, and age properties, and sorts those people by their last names. Do not worry about capitalization or first names.
 ------------------------------------------------------------------------------------------------ */
+
 
 function Person(firstName, lastName, age) {
   this.firstName = firstName;
@@ -110,7 +125,14 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-  // Solution code here...
+  arr.sort ((a,b) => {
+    if (a.lastName !== b.lastName) {
+      return a.lastName > b.lastName ? 1 : -1;
+    } else {
+      a > b
+    }
+  })
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
