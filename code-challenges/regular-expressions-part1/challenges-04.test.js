@@ -26,32 +26,25 @@ Write a function named isCapitalized that takes in a string. This function shoul
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
-// const isCapitaliize = (str) => {
-//     return str.toString().match(/^[A-Z]*/g);
+const isCapitalized = (str) => {
+    return str.toString().match(/[A-Z][a-z]*/g);
+};
+
+// const isCapitalized = (str) => {
+//     let regex = (/[A-Z][a-z]*/g);
+//     return str.match(regex);
 // };
 
 
-const isCapitaliize = (str) => {
-    let output = [];
-    str.forEach((word) => {
-        if(word.match(/[A-Z][a-z]*/g))
-        output.push(word);
-    })
-};
+// const isCapitalized = (str) => {
+//     let output = [];
+//     str.forEach((word) => {
+//         if(word.match(/[A-Z][a-z]*/g))
+//         output.push(word);
+//     })
+// };
 
-return output;
-
-
-
-
-
-
-
-
-const removeEvenValues = (arr) => {
-
-};
-
+// return output;
 
 
 
@@ -67,8 +60,9 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-    let
+
 };
+
 
 
 
