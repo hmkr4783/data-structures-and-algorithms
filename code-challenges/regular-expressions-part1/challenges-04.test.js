@@ -13,8 +13,10 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+    return input.toString().match(/\d/) ? true : false; 
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -24,9 +26,39 @@ Write a function named isCapitalized that takes in a string. This function shoul
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
-const isCapitalized = (str) => {
-  // Solution code here...
+// const isCapitaliize = (str) => {
+//     return str.toString().match(/^[A-Z]*/g);
+// };
+
+
+const isCapitaliize = (str) => {
+    let output = [];
+    str.forEach((word) => {
+        if(word.match(/[A-Z][a-z]*/g))
+        output.push(word);
+    })
 };
+
+return output;
+
+
+
+
+
+
+
+
+const removeEvenValues = (arr) => {
+
+};
+
+
+
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -35,8 +67,11 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+    let
 };
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
