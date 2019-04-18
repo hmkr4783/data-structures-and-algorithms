@@ -69,14 +69,6 @@ const citiesAtoJ = (arr) => {
     return output;
 };
 
-// let cityArr = [];
-//  arr.forEach(city => {
-//    if (city.match(/\b^[A-J]\w[\w]*/g)) {
-//      cityArr.push(city);
-//    }
-//  });
-//  return cityArr;
-// };
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,7 +84,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
+    return input.toString().match(/o/) ? true : false; 
 };
 
 /* ------------------------------------------------------------------------------------------------
