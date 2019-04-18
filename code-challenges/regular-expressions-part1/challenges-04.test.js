@@ -13,8 +13,10 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+    return input.toString().match(/\d/) ? true : false; 
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -25,8 +27,31 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+    return str.toString().match(/[A-Z][a-z]*/g);
 };
+
+// const isCapitalized = (str) => {
+//     let regex = (/[A-Z][a-z]*/g);
+//     return str.match(regex);
+// };
+
+
+// const isCapitalized = (str) => {
+//     let output = [];
+//     str.forEach((word) => {
+//         if(word.match(/[A-Z][a-z]*/g))
+//         output.push(word);
+//     })
+// };
+
+// return output;
+
+
+
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -35,8 +60,24 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+    let output = [];
+    arr.forEach(word => {
+        if (word.match(/\b^[A-J]\w[\w]*/g)) {
+            output.push(word);
+        }
+    });
+    return output;
 };
+
+// let cityArr = [];
+//  arr.forEach(city => {
+//    if (city.match(/\b^[A-J]\w[\w]*/g)) {
+//      cityArr.push(city);
+//    }
+//  });
+//  return cityArr;
+// };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
