@@ -84,7 +84,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-    return input.toString().match(/o/) ? true : false; 
+    return input.toString().match(/^(october|October|oct|Oct)$/) ? true : false; 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -98,8 +98,10 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...
+  return str.toString().match(/[a-z]+\s/gi);
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -114,8 +116,10 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  // Solution code here...
+  return str.replace(/(a|e|i|o|u)/g, '_');
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
